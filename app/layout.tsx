@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${josefinSans.className}`}>
-        <main className=" bg-black/80 text-white/85 flex justify-center items-center flex-col">
+        <main className=" bg-[#161513] text-white/85 flex justify-center items-center flex-col">
           <div className=" mx-auto w-full ">
             <Navbar />
             {children}

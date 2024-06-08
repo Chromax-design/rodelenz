@@ -54,7 +54,7 @@ const Navbar = () => {
           </NavigationMenu>
         </div>
       </nav>
-      <nav className=" flex justify-between md:hidden">
+      <nav className=" flex justify-between md:hidden py-2">
         <span
           className={
             " uppercase font-bold text-white tracking-wider border border-white p-2 text-sm"

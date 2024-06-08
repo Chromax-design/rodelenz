@@ -14,7 +14,7 @@ const Sidebar = () => {
       <SheetTrigger className="text-2xl">
         <FaBars />
       </SheetTrigger>
-      <SheetContent>
+      <SheetContent className="bg-[#161513] text-white">
         <div className=" h-full flex flex-col gap-5 py-5">
           {NavLinks.map((item) => {
             const isActive =
@@ -23,7 +23,7 @@ const Sidebar = () => {
               <Link
                 href={item.href}
                 key={item.href}
-                className={cn("capitalize text-2xl py-2", {
+                className={cn("capitalize text-xl py-2 hover:tracking-wider transition", {
                   " tracking-wider uppercase font-bold transition-all":
                     isActive,
                 })}
