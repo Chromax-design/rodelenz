@@ -44,7 +44,7 @@ export function Hero() {
                 className="w-full min-h-screen object-cover object-center brightness-[0.3]"
               />
             </div>
-            <div className="absolute top-0 left-0 w-full h-screen flex place-items-center flex-col px-3">
+            <div className="absolute top-0 left-0 w-full h-screen flex place-items-center flex-col px-4">
               <div className="max-w-4xl h-full flex justify-center items-start flex-col mt-20">
                 <h1 className="uppercase text-6xl font-bold tracking-wide">
                   <TextGenerateEffect

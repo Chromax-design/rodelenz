@@ -11,7 +11,7 @@ const Sidebar = () => {
   const pathname = usePathname();
   return (
     <Sheet>
-      <SheetTrigger>
+      <SheetTrigger className="text-2xl">
         <FaBars />
       </SheetTrigger>
       <SheetContent>
