@@ -22,6 +22,7 @@ const Sidebar = () => {
             return (
               <Link
                 href={item.href}
+                key={item.href}
                 className={cn("capitalize text-2xl py-2", {
                   " tracking-wider uppercase font-bold transition-all":
                     isActive,
