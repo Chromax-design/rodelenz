@@ -9,25 +9,11 @@ import {
 } from "@/components/ui/carousel";
 import { Button } from "./ui/button";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
+import Image from "next/image";
+import { HeroSlider } from "@/constants";
 
 export function Hero() {
-  const images = [
-    {
-      id: 1,
-      title: "make your story awesome",
-      image: "image1.jpg",
-    },
-    {
-      id: 2,
-      title: "photography is the magic",
-      image: "image2.jpg",
-    },
-    {
-      id: 3,
-      title: "photography is the life",
-      image: "image3.jpg",
-    },
-  ];
+  
   const plugin = React.useRef(
     Autoplay({ delay: 10000, stopOnInteraction: true })
   );
@@ -35,13 +21,14 @@ export function Hero() {
   return (
     <Carousel plugins={[plugin.current]} className="min-h-screen">
       <CarouselContent className="min-h-screen">
-        {images.map((item) => (
+        {HeroSlider.map((item) => (
           <CarouselItem key={item.id} className=" relative min-h-screen">
-            <div className="min-h-screen">
-              <img
+            <div className="min-h-screen relative">
+              <Image
                 src={`/${item.image}`}
                 alt={item.title}
-                className="w-full min-h-screen object-cover object-center brightness-[0.3]"
+                fill
+                className=" object-cover brightness-[0.3]"
               />
             </div>
             <div className="absolute top-0 left-0 w-full h-screen flex place-items-center flex-col px-4 md:px-10">

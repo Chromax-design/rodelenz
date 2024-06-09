@@ -6,6 +6,26 @@
     scroll-behavior: smooth;
   }
 
+  .aspect-2-3 {
+    aspect-ratio: 2 / 3;
+  }
+
+  .showline::after{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    height: 2px;
+    width: 0%;
+    display: block;
+    background-color: white;
+    transform: translateY(10px);
+    transition: width 0.5s ease;
+  }
+
+  .showline:hover::after{
+    width: 100%;
+  }
+
   @layer base {
     :root {
       --background: 0 0% 100%;
