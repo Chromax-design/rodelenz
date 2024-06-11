@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Josefin_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const josefinSans = Josefin_Sans({
   subsets: ["latin"],
@@ -21,10 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${josefinSans.className}`}>
-        <main className=" bg-[#161513] text-white/85 flex justify-center items-center flex-col">
-          <div className=" mx-auto w-full ">
+        <main className=" bg-[#161513] text-white/85 flex justify-center items-center flex-col overflow-y-clip">
+          <div className=" max-w-7xl mx-auto w-full ">
             <Navbar />
             {children}
+            <Footer />
           </div>
         </main>
       </body>

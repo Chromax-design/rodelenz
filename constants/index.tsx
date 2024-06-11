@@ -1,3 +1,5 @@
+import { FaFacebookF, FaInstagram, FaPinterestP } from "react-icons/fa6";
+
 export const NavLinks: { title: string; href: string }[] = [
   {
     title: "home",
@@ -76,4 +78,10 @@ export const PortfolioImages = [
     caption: "vicky and thomson",
     image: "pic1.jpg",
   },
+];
+
+export const socials = [
+  { id: 1, link: "", icon: <FaFacebookF /> },
+  { id: 2, link: "", icon: <FaPinterestP /> },
+  { id: 3, link: "", icon: <FaInstagram /> },
 ];

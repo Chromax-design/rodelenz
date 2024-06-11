@@ -19,7 +19,7 @@ export function Hero() {
   );
 
   return (
-    <Carousel plugins={[plugin.current]} className="min-h-screen">
+    <Carousel plugins={[plugin.current]} className="min-h-screen [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]">
       <CarouselContent className="min-h-screen">
         {HeroSlider.map((item) => (
           <CarouselItem key={item.id} className=" relative min-h-screen">
