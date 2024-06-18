@@ -1,6 +1,11 @@
 "use client";
 import React from "react";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { FaBars } from "react-icons/fa6";
 import { NavLinks } from "@/constants";
 import { usePathname } from "next/navigation";
@@ -15,24 +20,30 @@ const Sidebar = () => {
         <FaBars />
       </SheetTrigger>
       <SheetContent className="bg-[#161513] text-white">
-        <div className=" h-full flex flex-col gap-5 py-5">
-          {NavLinks.map((item) => {
-            const isActive =
-              pathname === item.href || pathname.startsWith(`${item.href}/`);
-            return (
-              <Link
-                href={item.href}
-                key={item.href}
-                className={cn("capitalize text-xl py-2 hover:tracking-wider transition", {
-                  " tracking-wider uppercase font-bold transition-all":
-                    isActive,
-                })}
-              >
-                {item.title}
-              </Link>
-            );
-          })}
-        </div>
+        <SheetClose asChild>
+          <div className=" h-full flex flex-col gap-5 py-5">
+            {NavLinks.map((item) => {
+              const isActive =
+                pathname === item.href || pathname.startsWith(`${item.href}/`);
+              return (
+                <SheetClose key={item.href} className="w-full" asChild>
+                  <Link
+                    href={item.href}
+                    className={cn(
+                      "capitalize text-xl py-2 hover:tracking-wider transition",
+                      {
+                        " tracking-wider uppercase font-bold transition-all":
+                          isActive,
+                      }
+                    )}
+                  >
+                    {item.title}
+                  </Link>
+                </SheetClose>
+              );
+            })}
+          </div>
+        </SheetClose>
       </SheetContent>
     </Sheet>
   );

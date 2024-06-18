@@ -2,7 +2,7 @@ import React from "react";
 
 const GetEmailed = () => {
   return (
-    <section className="px-3 py-10">
+    <section className="px-3 py-10 relative z-10">
       <h2 className="text-3xl md:text-5xl uppercase font-semibold max-w-5xl tracking-wide mb-7">
         NEED A PHOTOGRAPHER? SOMEONE WITH EXPERIENCE TO COLLABORATE WITH? WRITE
         ME!
